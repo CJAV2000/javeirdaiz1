@@ -1,111 +1,79 @@
-/*** VARIABLES RESET & AJUSTES GLOBALES***/
+/*** VARIABLES RESET & AJUSTES GLOBALES ***/
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Poppins:wght@400;600;700;900&display=swap');
 
-:root{
+:root {
     --theme: #5a3737;
     --primary: #ffffff;
     --secondary: #000000;
     --terciary: #ff4000;
     --cuaternary: #a8ce00;
-    --font: 'Poppins', 'sans serif';
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    /* RESET */
-    
-    body,p,a,ul,li {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        box-sizing: border-box;
-    }
-    
-    /* BASE STYLES */
-    
-    body{
-        background-color: var(--theme);
-        font-family: var(--font);
-    }
-  
-    body {
-        background: #895f5f;
-        color: #ffffff;
-        font-family: 'Roboto', sans-serif;
+    --font: 'Poppins', sans-serif;
+}
+
+/* RESET */
+html {
+    scroll-behavior: smooth;
+}
+
+body, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* BASE STYLES */
+body {
+    background-color: var(--theme);
+    color: var(--primary);
+    font-family: var(--font);
+    min-height: 100vh; 
+    width: 100vw; /* Ajuste de width */
+    display: flex;
+    flex-direction: column;
+}
+
+/************* SECCIONES: AJUSTES GLOBALES ************/
+#music, #video, #shows, #news, #shop, #academy, #contacto {
+    height: 100vh;
+    width: 100%;
+}
+
+#music { background-color: #000; }   
+#video { background-color: #666; }
+#shows { background-color: #4316d8; }
+#news  { background-color: #cd3939; }
+#shop  { background-color: #886dec; }
+#academy  { background-color: #f38500; }
+
+/* TITULOS */
+.music-titulo,
+.video-titulo,
+.shows-titulo,
+.news-titulo,
+.shop-titulo,
+.academy-titulo,
+.contacto-titulo {
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+/************* MEDIAS QUERIES ************/
+@media screen and (min-width: 420px) { 
+    #music, #video, #shows, #news, #shop, #contacto {
+        width: 100vw; 
         min-height: 100vh; 
-        max-width: 100vh;
-        display: flex;
-        flex-direction: column;
+        margin: 0 auto;
     }
+}
 
-/************* SECCIONES: AJUSTES GLOBALES SIZE COLOR  ************/
-    #music {
-      height: 100vh;
-      width: 100%;
-      background-color: #000;
-    }   
-    
-    #video {
-      height: 100vh;
-      width: 100%;
-      background-color: #666;
-      }
-      
-      #shows {
-        height: 100vh;
-        background-color: #999;
-      }
-      
-      #news {
-        height: 100vh;
-        background-color: #ccc;
-      }
-      
-      #shop {
-        height: 100vh;
-        background-color: #886dec;
-      }
-      /* titulos */
-
-      .music-titulo,
-      .video-titulo,
-      .shows-titulo,
-      .news-titulo,
-      .shop-titulo
-      .contacto-titulo
-      {
-        margin-top: 40px;
-        margin-left: 15px;
-      }
-      
-/************* MEDIAS QUERYS viewport 100%************/
-      @media screen and (min-width: 420px) { /* Media query para desktop */
-        #music,
-        #video, 
-        #shows, 
-        #news, 
-        #shop,
-        #contacto {
-          width: 100vw; /* Ocupa el 100% del ancho en desktop */
-          min-height: 100vh; /* Garantiza la altura mínima en desktop */
-          margin: 0 auto; /* Centra la sección horizontalmente */
-        }
-      }
- 
-
-/************* MEDIAS QUERYS GUIA COLOR ************/
+/* Cambios de color dinámicos en diferentes resoluciones */
 @media screen and (min-width: 300px) {
-	body{
-		background-color: #a28805;
-	}
+    body { background-color: #a28805; }
 }
 @media screen and (min-width: 600px) {
-	body{
-		background-color: #8c33f3;
-	}
+    body { background-color: #8c33f3; }
 }
 @media screen and (min-width: 900px) {
-	body{
-		background-color: #ff1515;
-	}
+    body { background-color: #ff1515; }
 }

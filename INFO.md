@@ -35,16 +35,65 @@ PROCESOS GIT EN VS CODE O CMD/GITBASH
 # paso 3 git status      // verifica si esta trackeado en rojo
 # paso 4 git add .       // trackea lo que no esta siendo rastreado
 # paso 5 git status     // debe salir trackeado en verde 
-# paso 6 git commit -m "modifique info" // agregar files y descripcion
+# paso 6 git commit -m "indicar cambios realizados" // agregar files y descripcion
 # paso 7 git status     // para verificar los cambios ok
 # paso 8 git push       // subir los cambios a github y corrobor
 
+CAMBIOS EN UN PROYECTO EN VSCODE YA ARRANCADO EN GIT
+
+git status
+git add .
+git commit -m "Actualización del HTML con cambios en el footer y botón Home"
+git push origin main
+
+
+2️⃣ Abre la terminal y ubícate en la carpeta del proyecto
+Si aún no estás en la carpeta de tu proyecto en la terminal, usa:
+
+bash
+Copiar código
+cd /ruta/del/proyecto
+(Ejemplo: cd C:\Users\TuUsuario\Documentos\JavierDiagaz)
+
+3️⃣ Verifica los cambios realizados
+Para ver qué archivos se modificaron antes de subirlos:
+
+git status
+
+4️⃣ Agrega los cambios al área de preparación
+Si quieres subir todos los cambios:
+
+git add .
+
+(Si solo quieres agregar el archivo HTML específico, usa: git add index.html)
+
+5️⃣ Crea un commit con un mensaje
+Registra los cambios con un mensaje claro:
+
+git commit -m "Actualización del HTML con cambios en el footer y botón Home"
+
+6️⃣ Sube los cambios a 
+
+git push origin main
+
+(Si tu rama principal se llama master en vez de main, usa git push origin master)
+
+✅ ¡Listo! Tu código ya está actualizado en GitHub. 🚀
+
+Si GitHub te pide autenticación, 
+usa tu usuario y 
+una Personal Access Token en 
+lugar de la contraseña (esto es por seguridad).
+
 
 
 
 
 ---------------------------------------
 ---------------------------------------
+
+
+
 Claro, puedes hacerlo todo en HTML, CSS y JS en el frontend y MySQL, PHP en el backend. Aquí hay algunos pasos que puedes seguir:
 
 1. Elige un proveedor de alojamiento web.
