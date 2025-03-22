@@ -41,17 +41,15 @@ PROCESOS GIT EN VS CODE O CMD/GITBASH
 
 CAMBIOS EN UN PROYECTO EN VSCODE YA ARRANCADO EN GIT
 
-git status
-git add .
-git commit -m "Actualización del HTML con cambios en el footer y botón Home"
-git push origin main
-
+# git status  
+# git add .
+# git commit -m "Actualización de los cambios"
+# git push origin main
 
 2️⃣ Abre la terminal y ubícate en la carpeta del proyecto
 Si aún no estás en la carpeta de tu proyecto en la terminal, usa:
 
 bash
-Copiar código
 cd /ruta/del/proyecto
 (Ejemplo: cd C:\Users\TuUsuario\Documentos\JavierDiagaz)
 
