@@ -145,7 +145,7 @@ ul.social-list-nav{
         list-style-type: none;
     }
     .nav-list li a {
-        color: #d3dee9;
+        color: #ffffff;
     }
     .nav-list li a:hover {
         background-color: var(--primary);
