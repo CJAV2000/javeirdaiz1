@@ -145,7 +145,7 @@ ul.social-list-nav{
         list-style-type: none;
     }
     .nav-list li a {
-        color: #2395ff;
+        color: #d3dee9;
     }
     .nav-list li a:hover {
         background-color: var(--primary);
@@ -170,7 +170,7 @@ ul.social-list-nav{
     }
 
     .social-list li a {
-        color: #0084ff;
+        color: #ffffff;
     }
     .abrir-menu,
     .cerrar-menu {
@@ -207,7 +207,7 @@ ul.social-list-nav{
     }
 
     .nav-list li a {
-        color: #0084ff;
+        color: #ffffff;
     }
     .logo {
         max-width: 10rem;
@@ -226,7 +226,7 @@ ul.social-list-nav{
     }
 
     .social-list li a {
-        color: #0084ff;
+        color: #ffffff;
     }
     .abrir-menu,
     .cerrar-menu {

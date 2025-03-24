@@ -5,37 +5,26 @@ document.addEventListener("DOMContentLoaded", function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const columns = Math.floor(canvas.width / 300);
-    const drops = [];
+    const cols = Math.floor(canvas.width / 20) + 1;
+    const ypos = Array(cols).fill(0);
 
-    
-    for (let i = 0; i < columns; i++) {
-        drops[i] = Math.random() * canvas.height;
-    }
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    function drawMatrix() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    function matrix() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.1)"; // Ajustamos la opacidad
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = "#0f0";
         ctx.font = "15pt monospace";
-
-        for (let i = 0; i < drops.length; i++) {
-            const text = String.fromCharCode(Math.floor(Math.random() * 94) + 33);
-            ctx.fillText(text, i * 20, drops[i] * 20);
-
-            if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
-                drops[i] = 0;
-            }
-
-            drops[i]++;
-        }
-    }
-   
-
-    function animateMatrix() {
-        drawMatrix();
-        requestAnimationFrame(animateMatrix);
+        ypos.forEach((y, ind) => {
+            const text = String.fromCharCode(Math.random() * 94+34);
+            const x = ind * 20;
+            ctx.fillText(text, x, y);
+            if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+            else ypos[ind] = y + 20;
+        })
     }
 
-    animateMatrix();
+    setInterval(matrix, 100);
 });

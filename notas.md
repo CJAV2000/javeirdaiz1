@@ -80,7 +80,7 @@ BLOG        => ESCRIBIR O MOSTRAR SOBRE MÚSICA
 VLOG        => ESCRIBIR O MOSTRAR SOBRE MÚSICA
 PODCAST     => SOBRE OPINIONES ACERCA DE ALGUN ASUNTO ARTISTICO O MUSICAL
 CONTENIDO INTERACTIVO => SORTEOS, REGALOS, CHALLENGES, PARTICIPACIONES
-GAMIFICACION => 
+GAMIFICACION =>   CREAR JUEGOS DIVERTIDO / APPS / GAMES
 
 ABARCAR TODO UN MONTON DE GENTE / TRÁFICO ORGANICO ARTIFICIAL => 
 CON UN SISTEMA DE RETROALIMENTACION DEL SISTEMA DE PROMOCION
@@ -151,9 +151,9 @@ Pantallas grandes: ancho superior a 1400 píxeles,
 ejemplo 1400 x 900 o 1600 x 1200.
 
 Relojes
-A
-
-Apple Watch: 42mm de anchura de pantalla, viewport de 256px (calculado en relación al tamaño de pantalla del iPhone)
+Apple Watch: 42mm de anchura de pantalla, 
+viewport de 256px (calculado en relación 
+al tamaño de pantalla del iPhone)
 360 Moto Watch: 218 x 281
 
 

@@ -46,13 +46,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 2; /* Asegura que la imagen flotante esté encima de la imagen de fondo */
+    z-index: 1; /* Asegura que la imagen flotante esté encima de la imagen de fondo */
 }
 
 /* Estilos para los textos dentro de la tarjeta */
 .hero-textos {
     color: white;
     font-weight: bold;
+    font-size: 40px;
     position: relative;
     margin-top: 60px;
     z-index: 2; /* Asegura que los textos estén por encima del efecto Matrix */
@@ -65,9 +66,9 @@
     background: #ff0000;
     color: #fff;
     display: block;
-    width: 150px;
+    width: 200px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 30px;
     text-align: center;
     padding: 10px;
     border: none;
