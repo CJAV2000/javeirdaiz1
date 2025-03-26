@@ -59,13 +59,15 @@ body {
 }
 
 /************* MEDIAS QUERIES ************/
-@media screen and (min-width: 420px) { 
+@media screen and (min-width: 800px) { 
     #music, #video, #shows, #news, #shop, #contacto {
         width: 100vw; 
         min-height: 100vh; 
         margin: 0 auto;
     }
 }
+
+
 
 /* Cambios de color dinámicos en diferentes resoluciones */
 @media screen and (min-width: 300px) {

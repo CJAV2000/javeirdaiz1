@@ -8,8 +8,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(img/hero.jpg);
-
 }
 .hero {
     margin-top: 0;
@@ -34,20 +32,8 @@
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    background-image: url(img/hero.jpg);
+   /* background-image: url(assets/images/hero-dueno/bgdesk.png); */
    
-}
-
-
-/* Estilos para la imagen flotante */
-.floating-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1; /* Asegura que la imagen flotante esté encima de la imagen de fondo */
 }
 
 /* Estilos para los textos dentro de la tarjeta */
@@ -92,20 +78,6 @@
     }
 }
 
-.floating-image {
-    animation: zoom 2s ease-in-out infinite;
-}
-.floating-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    max-width: 90%;
-    max-height: 90%;
-    animation: zoom 2s ease-in-out infinite;
-}
 #playButton {
     top: 190px; 
     width: 50px;
@@ -113,4 +85,26 @@
     border-radius: 50%;
     margin-top: 65px;
     /* el resto de tus estilos */
+}
+
+/* Styles de herofx.js / CENTRA EL TEXTO */
+
+.efecto-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 1
+}
+
+#efectoCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
 }

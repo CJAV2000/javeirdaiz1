@@ -117,7 +117,7 @@ ul.social-list-nav{
 
 /* Media Query pantallas 600px */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
     header {
         padding: 0.25rem; /* Reduce el padding para hacer el navbar más delgado */
     }
@@ -179,7 +179,7 @@ ul.social-list-nav{
 }
 /* Media Query pantallas 1024px */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1920px) {
     header {
         padding: 0.25rem; /* Reduce el padding para hacer el navbar más delgado */
     }

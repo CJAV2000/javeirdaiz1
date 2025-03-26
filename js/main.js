@@ -1,17 +1,13 @@
 function adjustImageSrc() {
     var width = window.innerWidth;
     var backgroundImage = document.querySelector('.background-image');
-    var floatingImage = document.querySelector('.floating-image');
 
-    if (width >= 900) {
-        backgroundImage.src = "img/hero/bgdesktop.png";
-        floatingImage.src = "img/hero/personajedesktop.png";
-    } else if (width >= 768) {
-        backgroundImage.src = "img/hero/bgtablet.png";
-        floatingImage.src = "img/hero/personajetablet.png";
+    if (width >= 800) {
+        backgroundImage.src = "assets/images/hero-dueno/bgdesk.png";
+    } else if (width >= 700) {
+        backgroundImage.src = "assets/images/hero-dueno/bgtablet.png";
     } else {
-        backgroundImage.src = "img/hero/bgmovil.png";
-        floatingImage.src = "img/hero/personajemovil.png";
+        backgroundImage.src = "assets/images/hero-dueno/bgmovil.png";
     }
 }
 

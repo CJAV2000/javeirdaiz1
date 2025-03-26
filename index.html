@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JAVIER DIAGAZ</title>
-    <link rel="shortcut icon" href="img/favicon1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/branding/favicon1.png" type="image/x-icon">
     
 <!-- STYLES -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/herofx.css">
     <link rel="stylesheet" href="css/shows.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -22,7 +21,7 @@
     <header>
     <!-- NAV BAR -->
         <a href="#index" class="logo"> 
-            <img class="iconlogo" src="img/logo.png" alt="Logo">
+            <img class="iconlogo" src="assets/images/branding/logo.png" alt="Logo">
         </a> 
         <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
         
@@ -52,12 +51,14 @@
             <a href="https://www.youtube.com/@javierdiagaz" target="_blank">
                 <button class="hero-button">Out Now</button>
             </a>
+        </div> 
+        <!-- HERO IMAGES-->
+        <img src="assets/images/hero-dueno/bgmovil.png" class="background-image" alt="Background">        
+        <!-- HERO FX JS-->
+        <div class="efecto-container">
+            <canvas id="efectoCanvas"></canvas>
         </div>
-        <img src="img/hero/bgmovil.png" class="background-image" alt="Background">
-        <img src="img/hero/personajemovil.png" class="floating-image" alt="Personaje">
-        <div class="matrix-container">
-            <canvas id="matrixCanvas"></canvas>
-        </div>
+
     </section>
 
 <!-- SECCIONES DE CONTENIDOS -->
@@ -101,7 +102,7 @@
 <!-- SCRIPTS -->
     <script src="https://kit.fontawesome.com/50deb7ac7f.js" crossorigin="anonymous"></script>
     <script src="js/nav.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script> 
     <script src="js/herofx.js"></script>
 </body>
 </html>
