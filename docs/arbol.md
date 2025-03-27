@@ -1,41 +1,58 @@
+
+-----------------------------------------
+-----------------------------------------
+
 javierdiagaz/
-│── css/
-│   ├── footer.css
-│   ├── hero.css
-│   ├── main.css
-│   ├── matrix.css
-│   ├── music.css
-│   ├── navbars.css
-│   ├── normaliza.css
-│   ├── shows.css
-│── img/
-│   ├── bgmotivation.jpg
-│   ├── bgmotivationp.jpg
-│   ├── personaje1.jpg
-│   ├── personaje1desktop.png
-│   ├── personaje1mobile.png
-│   ├── personaje1tablet.png
-│   ├── favicon.png
-│   ├── faviconp.png
-│   ├── fotoxp.png
-│   ├── logoxp.png
-│── img/shows/
-│   ├── 1.jpg
-│   ├── 2.jpg
-│   ├── 3.jpg
-│   ├── 4.jpg
-│   ├── 5.jpg
-│   ├── banner.jpg
-│── js/
+│
+├── assets/                  # Recursos estáticos
+│   ├── images/              # Imágenes 
+│   │   ├── hero-dueno/      # Imágenes de hero portada
+│   │   │   ├── bgmovil.png
+│   │   │   ├── bgtablet.png
+│   │   │   └── bgdesk.png
+│   │   │
+│   │   ├── shows/           # Imágenes de shows
+|   |   |
+│   │   ├── music/           # Imágenes de musica
+|   |   |
+│   │   ├── video/           # Imágenes de video
+|   |   |
+│   │   ├── blog/           # Imágenes de blog
+|   |   |
+│   │   └── branding/        # Logos e iconos
+│   │       ├── favicon.png
+│   │       ├── favicon1.png
+│   │       └── logo.png
+│   │   
+│   │
+│   |── audio/               # Archivos de música
+│   |   └── (archivos de música)
+│   |
+|   └── video/               # Archivos de video
+|       └── (archivos de video)
+|
+├── styles/              # Archivos CSS organizados
+│   |── normalize.css    # Normalización de estilos
+│   |── main.css         # Estilos principale
+│   ├── navbar.css       # Estilos de navegación
+│   ├── footer.css       # Estilos de pie de página
+│   ├── music.css        # Estilos de music
+│   └── hero.css         # Estilos de secciones hero
+|           
+├── scripts/                 # Archivos JavaScript
 │   ├── main.js
-│   ├── matrix.js
-│   ├── nav.js
-│── index.html
-│── readme.md
+│   ├── herofx.js        # Lógica de efectos
+│   └── nav.js           # Navegación
+│
+├── docs/                    # Documentación
+│   ├── info.md
+│   └── notes.md
+│
+├── index.html               # Página principal
+├── README.md                # Documentación del proyecto
 
 
-
-
+------------------------------------------
 ---------------------------------------
 
 
@@ -66,8 +83,8 @@ javierdiagaz/
 │   │   │   ├── favicon.png
 │   │   │   ├── faviconp.png
 │   │   │   ├── logoxp.png
-│   │   │   └── fotoxp.png
-│   │
+│   │   └── └── fotoxp.png
+│   │   
 │   ├── audio/               # Archivos de música
 │   │   └── (archivos de música)
 │   │
@@ -81,8 +98,7 @@ javierdiagaz/
 │   ├── components/
 │   │   ├── navbar.css       # Estilos de navegación
 │   │   ├── footer.css       # Estilos de pie de página
-│   │   ├── heroes.css       # Estilos de secciones hero
-│   │   └── shows.css        # Estilos de secciones de shows
+│   │   ├── hero.css       # Estilos de secciones hero
 │   │
 │   ├── pages/
 │   │   ├── demos.css
