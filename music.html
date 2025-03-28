@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MÚSICA - JAVIER DIAGAZ</title>
+    <link rel="shortcut icon" href="assets/images/branding/favicon1.png" type="image/x-icon">
+    
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+    <header>
+    <!-- NAV BAR -->
+        <a href="index.html" class="logo"> 
+            <img class="iconlogo" src="assets/images/branding/logo.png" alt="Logo">
+        </a> 
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+
+            <ul class="nav-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#music">MUSIC</a></li>
+                <li><a href="index.html#video">VIDEO</a></li>
+                <li><a href="index.html#shows">SHOWS</a></li>
+                <li><a href="index.html#news">NEWS</a></li>
+                <li><a href="index.html#shop">SHOP</a></li>  
+                <li><a href="index.html#academy">ACADEMY</a></li>  
+                <li><a href="index.html#footer">CONTACT</a></li>  
+            </ul>    
+        </nav>
+    </header>  
+
+    <!-- HERO MÚSICA -->
+    <section class="music-hero">
+        <div class="music-hero-content">
+            <h1>MI MÚSICA</h1>
+            <p>Descubre todas mis canciones en tus plataformas favoritas</p>
+        </div>
+        <div class="music-hero-image">
+            <img 
+                src="assets/images/music/music-hero-small.jpg" 
+                srcset="assets/images/music/music-hero-small.jpg 620w, 
+                        assets/images/music/music-hero-medium.jpg 1280w, 
+                        assets/images/music/music-hero-large.jpg 1920w"
+                sizes="100vw"
+                alt="JAVIER DIAGAZ - Música" 
+            >
+        </div>
+    </section>
+    
+    <!-- CATÁLOGO COMPLETO -->
+    <section class="music-catalog">
+        <h2 class="catalog-title">TODOS MIS LANZAMIENTOS</h2>
+        
+        <div class="music-container">
+            <!-- Tarjeta principal del lanzamiento actual -->
+            <div class="music-card">
+                <div class="album-cover">
+                    <img 
+                        src="assets/images/music/dueno-cover-small.jpg" 
+                        srcset="assets/images/music/dueno-cover-small.jpg 400w, 
+                                assets/images/music/dueno-cover-medium.jpg 800w, 
+                                assets/images/music/dueno-cover-large.jpg 1200w"
+                        sizes="(max-width: 600px) 90vw, 
+                               (max-width: 1024px) 45vw, 
+                               22vw"
+                        alt="DUEÑO DE TU AMOR - JAVIER DIAGAZ" 
+                        class="album-image"
+                    >
+                    <div class="album-overlay">
+                        <div class="streaming-links">
+                            <a href="#" class="streaming-link spotify" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-spotify"></i>
+                            </a>
+                            <a href="#" class="streaming-link apple" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-apple"></i>
+                            </a>
+                            <a href="#" class="streaming-link youtube" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="album-info">
+                    <h3 class="album-title">DUEÑO DE TU AMOR</h3>
+                    <p class="album-artist">JAVIER DIAGAZ</p>
+                    <p class="album-details">
+                        <span class="album-date">Lanzamiento: 29/03/2025</span>
+                        <span class="album-duration">3:45</span>
+                    </p>
+                    <button class="details-toggle" data-target="song-details-full-1">Ver detalles</button>
+                    <div id="song-details-full-1" class="song-details">
+                        <div class="song-credits">
+                            <h4>Créditos</h4>
+                            <p>Producción: Nombre del Productor</p>
+                            <p>Composición: JAVIER DIAGAZ</p>
+                            <p>Mezcla y Master: Nombre del Ingeniero</p>
+                        </div>
+                        <div class="song-story">
+                            <h4>Historia de la Canción</h4>
+                            <p>"DUEÑO DE TU AMOR" es una canción que explora... [historia completa de la canción]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjetas para futuros lanzamientos (placeholders) -->
+            <div class="music-card placeholder">
+                <div class="album-cover placeholder-cover">
+                    <span>Próximamente</span>
+                </div>
+            </div>
+            
+            <div class="music-card placeholder">
+                <div class="album-cover placeholder-cover">
+                    <span>Próximamente</span>
+                </div>
+            </div>
+            
+            <div class="music-card placeholder">
+                <div class="album-cover placeholder-cover">
+                    <span>Próximamente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer">
+        <div class="footer-wrapper">
+            <h2 class="contact-titulo">CONTACTARME</h2>
+            
+            <!-- SOCIALS -->
+            <ul class="social-list-footer">
+                <li><a href="https://x.com/JavierDiagaz" target="_blank"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a></li>
+                <li><a href="https://www.tiktok.com/@javierdiagaz" target="_blank"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a></li>
+                <li><a href="https://www.instagram.com/javierdiagaz/" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574168006641" target="_blank"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a></li>
+                <li><a href="https://www.youtube.com/@JavierDiagaz" target="_blank"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></li>
+                <li><a href="URL_DE_SPOTIFY" target="_blank"><i class="fa-brands fa-spotify" style="color: #ffffff;"></i></a></li>
+                <li><a href="URL_DE_APPLE" target="_blank"><i class="fa-brands fa-apple" style="color: #ffffff;"></i></a></li>
+                <li><a href="URL_DE_NEWSLETTER" target="_blank"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- LEGAL -->
+        <div class="footer-info">
+            <ul class="enlaces-legales">
+                <li><p class="copy">&copy; COPYRIGHT 2025</p></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="#">TERMS OF USE</a></li>
+                <li><a href="#">COOKIES POLICY</a></li>
+                <li><a href="#">COOKIES SETTINGS</a></li>
+            </ul>
+        </div> 
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://kit.fontawesome.com/50deb7ac7f.js" crossorigin="anonymous"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/music.js"></script>
+</body>
+</html>
+
+

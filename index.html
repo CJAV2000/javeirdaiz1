@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JAVIER DIAGAZ</title>
     <link rel="shortcut icon" href="assets/images/branding/favicon1.png" type="image/x-icon">
-    
+
 <!-- STYLES -->
+ 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -16,7 +17,9 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/shows.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/music.css">
 </head>
+
 <body>
     <header>
     <!-- NAV BAR -->
@@ -62,11 +65,91 @@
 
     </section>
 
-<!-- SECCIONES DE CONTENIDOS -->
-    <section id="music"><h1 class="music-titulo">MUSIC</h1></section>
+
+
+<!-- MUSICA SECCIONES DE CONTENIDOS MUSICA-->
+<!--   <section id="music"><h1 class="music-titulo">MUSIC</h1></section> -->
+<!-- Sección de música con enfoque mobile-first -->
+ 
+<section id="music" class="music-section">
+    <h1 class="music-titulo">MUSIC</h1>
+    
+    <div class="music-container">
+        <!-- Tarjeta principal del lanzamiento actual -->
+        <div class="music-card featured">
+            <div class="album-cover">
+                <img 
+                    src="assets/images/music/dueno-cover-small.png" 
+                    srcset="assets/images/music/dueno-cover-small.png 400w, 
+                            assets/images/music/dueno-cover-medium.png 800w, 
+                            assets/images/music/dueno-cover-large.png 1200w"
+                    sizes="(max-width: 600px) 90vw, 
+                           (max-width: 1024px) 45vw, 
+                           22vw"
+                    alt="DUEÑO DE TU AMOR - JAVIER DIAGAZ" 
+                    class="album-image"
+                >
+                <div class="album-overlay">
+                    <div class="streaming-links">
+                        <a href="#" class="streaming-link spotify" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                        <a href="#" class="streaming-link apple" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                        <a href="#" class="streaming-link youtube" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="album-info">
+                <h3 class="album-title">DUEÑO DE TU AMOR</h3>
+                <p class="album-artist">JAVIER DIAGAZ</p>
+                <p class="album-details">
+                    <span class="album-date">29/03/2025</span>
+                    <span class="album-duration">3:45</span>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Placeholders para futuros lanzamientos (se mostrarán según el viewport) -->
+        <div class="music-card placeholder">
+            <div class="album-cover placeholder-cover">
+                <span>Próximamente</span>
+            </div>
+        </div>
+        
+        <div class="music-card placeholder">
+            <div class="album-cover placeholder-cover">
+                <span>Próximamente</span>
+            </div>
+        </div>
+        
+        <div class="music-card placeholder">
+            <div class="album-cover placeholder-cover">
+                <span>Próximamente</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="view-more-container">
+        <a href="music.html" class="view-more-btn">VER MÁS</a>
+    </div>
+</section>
+
+
+
+
+    <!--VIDEO SECCIONES DE CONTENIDOS VIDEO-->
     <section id="video"><h1 class="video-titulo">VÍDEO</h1></section>
+
+    <!--SHOWS SECCIONES DE CONTENIDOS SHOWS-->
     <section id="shows"><h1 class="shows-titulo">SHOWS</h1></section>
+
+    <!--NEWS SECCIONES DE CONTENIDOS NEWS-->
     <section id="news"><h1 class="news-titulo">NEWS</h1></section>
+   
     <section id="shop"><h1 class="shop-titulo">SHOP</h1></section>
     <section id="academy"><h1 class="academy-titulo">ACADEMY</h1></section>
      
@@ -105,5 +188,8 @@
     <script src="js/nav.js"></script>
     <script src="js/main.js"></script> 
     <script src="js/herofx.js"></script>
+    <!--script src="js/music.js"></-script> -->
 </body>
 </html>
+
+

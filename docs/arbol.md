@@ -33,22 +33,24 @@ javierdiagaz/
 |
 ├── styles/              # Archivos CSS organizados
 │   |── normalize.css    # Normalización de estilos
-│   |── main.css         # Estilos principale
+│   |── main.css         # Estilos principales
 │   ├── navbar.css       # Estilos de navegación
 │   ├── footer.css       # Estilos de pie de página
-│   ├── music.css        # Estilos de music
-│   └── hero.css         # Estilos de secciones hero
+│   ├── hero.css         # Estilos de music
+│   └── music.css        # Estilos de secciones hero
 |           
 ├── scripts/                 # Archivos JavaScript
 │   ├── main.js
 │   ├── herofx.js        # Lógica de efectos
-│   └── nav.js           # Navegación
+│   ├── nav.js           # Navegación
+│   ├── music.js 
 │
 ├── docs/                    # Documentación
 │   ├── info.md
 │   └── notes.md
 │
 ├── index.html               # Página principal
+├── music.html               # Página de musica
 ├── README.md                # Documentación del proyecto
 
 
