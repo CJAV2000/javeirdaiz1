@@ -1,412 +1,172 @@
 /* ===== ESTILOS PARA SECCIÓN DE MÚSICA ===== */
-
-/* Variables */
 :root {
-    --primary-bg: #000000;
-    --secondary-bg: #111111;
-    --accent-color: #ff0055; /* Color de acento que puedes ajustar a tu paleta */
-    --text-color: #ffffff;
-    --text-secondary: #b3b3b3;
-    --transition-speed: 0.3s;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --border-radius: 8px;
-  }
-  
-  /* ===== SECCIÓN #MUSIC EN INDEX.HTML ===== */
-  .music-section {
-    padding: var(--spacing-lg) 0;
-    background-color: var(--primary-bg);
-    color: var(--text-color);
-    height: 100vh; /* Altura exacta del viewport */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden; /* Evita desbordamiento */
-    position: relative; /* Para posicionamiento absoluto interno */
+  --primary-bg: #000000;
+  --secondary-bg: #111111;
+  --accent-color: #ff0055;
+  --text-color: #ffffff;
+  --text-secondary: #b3b3b3;
+  --transition-speed: 0.3s;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --border-radius: 8px;
+}
+
+.music-section {
+  padding: var(--spacing-lg) 0;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.music-titulo {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.music-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.music-card {
+  background-color: var(--secondary-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: transform var(--transition-speed);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+}
+
+.album-cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.album-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.music-card:hover .album-image {
+  transform: scale(1.05);
+}
+
+.album-info {
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.album-title {
+  margin: 0 0 var(--spacing-sm);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.album-artist {
+  margin: 0 0 var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+.album-details {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Estilos base para ambos botones */
+.album-button {
+  background-color: #ff0000; /* Rojo sólido en lugar de transparente */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px; /* Tamaño de fuente más razonable */
+  text-align: center;
+  padding: 10px 20px; /* Padding horizontal adicional */
+  border: none;
+  border-radius: 100px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px; /* Espacio entre botones */
+  width: auto; /* Ancho automático basado en contenido */
+  display: inline-block; /* Para que estén uno al lado del otro */
+}
+
+/* Estilos específicos si son necesarios */
+.album-button-listen, .album-button-info {
+  /* Asegurando que ambos botones tengan las mismas propiedades */
+  min-width: 100px; /* Ancho mínimo para ambos botones */
+}
+
+
+
+
+.view-more-container {
+  text-align: center;
+  margin-top: var(--spacing-md);
+  width: 100%;
+}
+
+.view-more-btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all var(--transition-speed);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.view-more-btn:hover {
+  background-color: #ff3377;
+  transform: translateY(-2px);
+}
+
+/* Responsive Media Queries */
+/* Mobile first (default above) is 1 card */
+
+/* Tablet: 2 portadas */
+@media (min-width: 768px) and (max-width: 999px) {
+  .music-container {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .music-titulo {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: var(--spacing-md);
-    position: relative;
-    text-transform: uppercase;
+    font-size: 2rem;
   }
-  
-  .music-titulo::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--accent-color);
-    margin: var(--spacing-sm) auto 0;
-  }
-  
-  /* Contenedor de música - Mobile First (1 columna) */
+}
+
+/* Desktop: 4 portadas */
+@media (min-width: 1000px) {
   .music-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile: 1 columna */
-    gap: var(--spacing-md);
-    height: calc(100vh - 200px); /* Altura calculada para ajustarse al viewport */
-    overflow-y: auto; /* Permite scroll si es necesario */
+    grid-template-columns: repeat(4, 1fr);
   }
   
-  /* Ocultar placeholders en móvil */
-  .music-card.placeholder {
-    display: none;
-  }
-  
-  /* Tarjeta de música */
-  .music-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .music-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-  }
-  
-  .music-card.featured {
-    grid-column: 1 / -1; /* Ocupa toda la fila */
-  }
-  
-  .album-cover {
-    position: relative;
-    padding-bottom: 100%; /* Mantiene relación de aspecto 1:1 */
-    overflow: hidden;
-  }
-  
-  .album-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-speed);
-  }
-  
-  .music-card:hover .album-image {
-    transform: scale(1.05);
-  }
-  
-  .album-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
-    opacity: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: var(--spacing-md);
-    transition: opacity var(--transition-speed);
-  }
-  
-  .music-card:hover .album-overlay {
-    opacity: 1;
-  }
-  
-  .streaming-links {
-    display: flex;
-    gap: var(--spacing-md);
-  }
-  
-  .streaming-link {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform var(--transition-speed);
-  }
-  
-  .streaming-link:hover {
-    transform: scale(1.1);
-  }
-  
-  .streaming-link i {
-    font-size: 20px;
-    color: var(--primary-bg);
-  }
-  
-  /* Información del álbum */
-  .album-info {
-    padding: var(--spacing-sm);
+  .music-titulo {
+    font-size: 3.5rem;
   }
   
   .album-title {
-    font-size: 1.2rem;
-    margin: 0 0 var(--spacing-sm);
-    text-transform: uppercase;
+    font-size: 1.3rem;
   }
-  
-  .album-artist {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin: 0 0 var(--spacing-sm);
-  }
-  
-  .album-details {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-  }
-  
-  .details-toggle {
-    background: none;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: var(--spacing-sm) var(--spacing-md);
-    margin-top: var(--spacing-md);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all var(--transition-speed);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-  }
-  
-  .details-toggle:hover {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-  }
-  
-  .song-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-  }
-  
-  .song-details.active {
-    max-height: 500px;
-    margin-top: var(--spacing-md);
-  }
-  
-  .song-credits,
-  .song-story {
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .song-credits h4,
-  .song-story h4 {
-    color: var(--accent-color);
-    margin-bottom: var(--spacing-sm);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-  }
-  
-  /* Placeholders para futuras canciones */
-  .placeholder-cover {
-    background-color: rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .placeholder-cover span {
-    color: var(--text-secondary);
-    font-style: italic;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-  }
-  
-  /* Asegurar que el botón "Ver más" siempre sea visible */
-  .view-more-container {
-    text-align: center;
-    margin-top: var(--spacing-md);
-    position: absolute;
-    bottom: var(--spacing-md);
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-  
-  .view-more-btn {
-    display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    background-color: var(--accent-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .view-more-btn:hover {
-    background-color: #ff3377; /* Versión más clara del color de acento */
-    transform: translateY(-2px);
-  }
-  
-  /* ===== PÁGINA MUSIC.HTML ===== */
-  .music-hero {
-    position: relative;
-    height: 50vh;
-    min-height: 300px;
-    margin-bottom: var(--spacing-xl);
-    overflow: hidden;
-  }
-  
-  .music-hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  .music-hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .music-hero-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: var(--spacing-xl);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-    z-index: 2;
-  }
-  
-  .music-hero-content h1 {
-    font-size: 2.5rem;
-    margin: 0 0 var(--spacing-sm);
-    text-transform: uppercase;
-  }
-  
-  .music-hero-content p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0;
-  }
-  
-  .music-catalog {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--primary-bg);
-  }
-  
-  .catalog-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-    position: relative;
-    text-transform: uppercase;
-  }
-  
-  .catalog-title::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--accent-color);
-    margin: var(--spacing-sm) auto 0;
-  }
-  
-  /* ===== MEDIA QUERIES ===== */
-  /* Tablet (2 columnas) */
-  @media (min-width: 600px) {
-    .music-titulo {
-      font-size: 3rem;
-    }
-  
-    /* Mostrar 2 columnas en tablet */
-    .music-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    /* Mostrar solo el primer placeholder en tablet */
-    .music-card.placeholder:nth-child(2) {
-      display: block;
-    }
-  
-    /* Los demás placeholders siguen ocultos */
-    .music-card.placeholder:nth-child(3),
-    .music-card.placeholder:nth-child(4) {
-      display: none;
-    }
-  }
-  
-  /* Desktop (4 columnas) */
-  @media (min-width: 1024px) {
-    .music-titulo {
-      font-size: 3.5rem;
-    }
-  
-    /* Mostrar 4 columnas en desktop */
-    .music-container {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  
-    /* Mostrar todos los placeholders en desktop */
-    .music-card.placeholder {
-      display: block;
-    }
-  
-    /* La tarjeta principal ocupa 2 columnas en desktop */
-    .music-card.featured {
-      grid-column: span 2;
-    }
-  }
-  
-  /* Animaciones */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes pulse {
-    0%,
-    100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-  
-  .music-card {
-    animation: fadeIn 0.8s ease forwards;
-    opacity: 0;
-  }
-  
-  .music-card:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  .music-card:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  .music-card:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  .music-card:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  
-  
+}
