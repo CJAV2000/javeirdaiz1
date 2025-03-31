@@ -129,3 +129,17 @@ javierdiagaz/
 ├── README.md                # Documentación del proyecto
 ├── .gitignore               # Git ignore
 └── package.json             # Configuración de proyecto (opcional)
+
+
+--------------------------------------------
+MODELO DE NEGOCIO IDEAL 
+--------------------------------------------
+DIGITAL
+AUTOMATIZADO
+RECURRENTE
+PERENNE
+ESCALABLE
+DESCENTRALIZADO
+EVERGREEN
+DEMOCRATICO
+
