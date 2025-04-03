@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Enlaces | Javier Diagaz</title>
+    <link rel="stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Javier Diagaz</h1>
+        <p>Escucha mi música y sígueme en redes</p>
+
+        <div class="links">
+            <a href="https://open.spotify.com/intl-es/album/3rOwIcm5oJXiwc8EDLla84?si=_mFPhfVKQ92pyuy3qXuWNw" target="_blank" class="link spotify">
+                <i class="bi bi-spotify"></i> Spotify
+            </a>
+            <a href="https://music.apple.com/pe/artist/javier-diagaz/1804938700" target="_blank" class="link apple">
+                <i class="bi bi-apple"></i> Apple Music
+            </a>
+            <a href="https://x.com/JavierDiagaz" target="_blank" class="link twitter">
+                <i class="bi bi-twitter-x"></i> Twitter
+            </a>
+            <a href="https://www.youtube.com/@javierdiagaz" target="_blank" class="link youtube">
+                <i class="bi bi-youtube"></i> YouTube
+            </a>
+            <a href="https://www.tiktok.com/@javierdiagaz" target="_blank" class="link tiktok">
+                <i class="bi bi-tiktok"></i> TikTok
+            </a>
+            <a href="https://www.instagram.com/javierdiagaz/" target="_blank" class="link instagram">
+                <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61574168006641&sk=about" target="_blank" class="link facebook">
+                <i class="bi bi-facebook"></i> Facebook
+            </a>
+            
+        </div>
+    </div>
+    
+    <button class="share-btn" onclick="compartirEnlace()">🔗 SHARE</button>
+
+    <script>
+        function compartirEnlace() {
+            if (navigator.share) {
+                navigator.share({
+                    title: "¡Mira mis redes!",
+                    text: "Aquí están todos mis enlaces",
+                    url: window.location.href
+                });
+            } else {
+                alert("Tu navegador no soporta compartir enlaces.");
+            }
+        }
+    </script>
+</body>
+</html>
