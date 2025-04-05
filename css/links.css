@@ -44,7 +44,7 @@ body {
 /* Colores específicos para cada plataforma */
 .link.spotify {
     background: #1DB954;
-    border-color: #1DB954;
+    border-color: #FFFFFF;
 }
 .link.spotify:hover {
     background: #1ED760;
@@ -52,8 +52,8 @@ body {
 }
 
 .link.apple {
-    background: #FA243C;
-    border-color: #FA243C;
+    background: #e9374b;
+    border-color: #FFFFFF;
 }
 .link.apple:hover {
     background: #FF2D55;
@@ -61,8 +61,8 @@ body {
 }
 
 .link.youtube {
-    background: #FF0000;
-    border-color: #FF0000;
+    background: #ff0000;
+    border-color: #FFFFFF;
 }
 .link.youtube:hover {
     background: #FF3333;
@@ -80,7 +80,7 @@ body {
 
 .link.instagram {
     background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-    border-color: #E1306C;
+    border-color: #FFFFFF;z
 }
 .link.instagram:hover {
     background: linear-gradient(45deg, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
@@ -88,11 +88,11 @@ body {
 }
 
 .link.facebook {
-    background: #1877F2;
-    border-color: #1877F2;
+    background: #0026ff;
+    border-color: #FFFFFF;
 }
 .link.facebook:hover {
-    background: #3B5998;
+    background: #124dcc;
     box-shadow: 0 0 25px rgba(59, 89, 152, 0.5);
 }
 
